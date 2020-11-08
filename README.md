@@ -1,1 +1,1 @@
-https://youthful-snyder-2c9375.netlify.app/
+https://betulerkoc.netlify.app
