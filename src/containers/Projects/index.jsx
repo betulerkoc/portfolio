@@ -15,6 +15,7 @@ import { faGithub} from '@fortawesome/free-brands-svg-icons'
 const useStyles = makeStyles({
     root: {
       margin: 30,
+      maxWidth: 400,
     },
     media: {
       width: 400,
@@ -23,6 +24,10 @@ const useStyles = makeStyles({
     row: {
       display: 'flex',
       justifyContent: 'space-between',
+    },
+    text: {
+      marginTop: 10,
+      marginBottom: 10,
     }
   });
 
@@ -32,15 +37,15 @@ export default function Projects() {
         {
             projectName: "SnowLibz",
             source: Madlibz,
-            description: "lkdflksd",
-            technologies: "Vanilla Js, p5.js",
+            description: "",
+            technologies: "Vanilla js, p5.js",
             projectLink: "https://madlibz-68db7a.netlify.app/",
             sourceCode: "https://github.com/betulerkoc/mad-libs-challenge",
         },
         {
             projectName: "Movie",
             source: Movie,
-            description: "lkdflksd",
+            description: "",
             technologies: "Vanilla js, Bootsrap",
             projectLink: "https://oop-movie-7ac10a.netlify.app/",
             sourceCode: "https://github.com/betulerkoc/oop-movie",
@@ -48,7 +53,7 @@ export default function Projects() {
         {
             projectName: "Wolt",
             source: Wolt,
-            description: "lkdflksd",
+            description: "",
             technologies: "React.js, Context API, Styled Components, Enzyme",
             projectLink: "https://wolt-challenge-862851.netlify.app/",
             sourceCode: "https://github.com/betulerkoc/wolt-challenge",
@@ -56,15 +61,15 @@ export default function Projects() {
         {
             projectName: "Diet Manager",
             source: DietManager,
-            description: "lkdflksd",
-            technologies: "React.js, Firebase, bootstrap",
+            description: "",
+            technologies: "React.js, Firebase, Bootstrap",
             projectLink: "https://github.com/betulerkoc/diet-manager",
             sourceCode: "https://dietmanager-431962.netlify.app/",
         },
         {
             projectName: "Charging Stations",
             source: ChargingStations,
-            description: "lkdflksd",
+            description: "Blockchain-based reservation application for electrical vehicles. This platform provides that users can find a station, see the current service price, make a reservation, and make payment safely via ethereum network. In order to make a payment, users should give permission to their metamask wallet extension in their browser.",
             technologies: "Solidity, web3.js, React.js, Mapbox, Firebase, Bootstrap",
             projectLink: "https://find-station-787f1c.netlify.app/",
             sourceCode: "https://github.com/betulerkoc/station-frontend",
@@ -72,7 +77,7 @@ export default function Projects() {
         {
             projectName: "Porfolio",
             source: Portfolio,
-            description: "lkdflksd",
+            description: "",
             technologies: "React.js, material-ui",
             projectLink: "https://youthful-snyder-2c9375.netlify.app/",
             sourceCode: "https://github.com/betulerkoc/portfolio",
@@ -130,8 +135,11 @@ export default function Projects() {
                         <Typography gutterBottom variant="h5" component="h2">
                             {m.projectName}
                         </Typography>
+                        <Typography variant="body2" component="p" className={classes.text}>
+                           {m.description}
+                        </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                           
+                           {m.technologies}
                         </Typography>
                         <div className={classes.row}>
                             <a href={m.sourceCode} target="_black"><FontAwesomeIcon icon={faGithub} /></a>
