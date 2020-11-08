@@ -33,3 +33,9 @@ img{
 .aboutMe{
   margin:2em;
 }
+
+.contactMe{
+  margin-block-start: 10em;
+  display: 'flex';
+  justify-content: space-between;
+}

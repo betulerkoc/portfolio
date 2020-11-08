@@ -4,8 +4,9 @@ import { Switch, Route, NavLink, useLocation } from "react-router-dom";
 import Resume from "./containers/Resume"
 import Home from "./containers/Home"
 import Projects from "./containers/Projects"
-import Contact from "./containers/Contact"
 import Photo from '../public/betull.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
 import "./App.css";
 
 function App() {
@@ -39,12 +40,13 @@ function App() {
                 Resume
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to="/contact" className="nav-link text-white">
-                Contact
-              </NavLink>
-            </li>
           </ul>
+          <div className="contactMe">
+            <h3>Contact me</h3>
+            <h6>betulfatmaerkoc@gmail.com</h6>
+            <a href="https://www.linkedin.com/in/bet%C3%BCl-erko%C3%A7-a38b24109/" target="_black"><FontAwesomeIcon icon={faLinkedin} /></a>
+            <a href="https://github.com/betulerkoc" target="_black"><FontAwesomeIcon icon={faGithub} /></a>
+          </div>
         </nav>
         <main
           className="col-6 col-sm-8 col-md-10 py-5"
@@ -54,7 +56,6 @@ function App() {
             <Switch location={location} key={location.pathname}>
               <Route path="/projects" component={Projects} />
               <Route path="/resume" component={Resume} />
-              <Route path="/contact" component={Contact} />
               <Route path="/" component={Home} />
             </Switch>
           </AnimatePresence>

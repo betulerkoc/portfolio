@@ -1,24 +1,74 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import {Card, CardActionArea, CardContent, CardMedia, Typography} from '@material-ui/core';
+import Madlibz from '../../../public/madlibz.png';
+import Movie from '../../../public/movie.png';
+import DietManager from '../../../public/diet.png';
+import Wolt from '../../../public/wolt.png';
+import ChargingStations from '../../../public/charging.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faGithub} from '@fortawesome/free-brands-svg-icons'
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      margin: 30,
     },
     media: {
+      width: 400,
       height: 140,
     },
+    row: {
+      display: 'flex',
+      justifyContent: 'space-between',
+    }
   });
 
 export default function Projects() {
+
+    const projects = [
+        {
+            projectName: "SnowLibz",
+            source: Madlibz,
+            description: "lkdflksd",
+            technologies: "Vanilla Js, p5.js",
+            projectLink: "https://madlibz-68db7a.netlify.app/",
+            sourceCode: "https://github.com/betulerkoc/mad-libs-challenge",
+        },
+        {
+            projectName: "Movie",
+            source: Movie,
+            description: "lkdflksd",
+            technologies: "Vanilla js, Bootsrap",
+            projectLink: "https://oop-movie-7ac10a.netlify.app/",
+            sourceCode: "https://github.com/betulerkoc/oop-movie",
+        },
+        {
+            projectName: "Wolt",
+            source: Wolt,
+            description: "lkdflksd",
+            technologies: "React.js, Context API, Styled Components, Enzyme",
+            projectLink: "https://wolt-challenge-862851.netlify.app/",
+            sourceCode: "https://github.com/betulerkoc/wolt-challenge",
+        },
+        {
+            projectName: "Diet Manager",
+            source: DietManager,
+            description: "lkdflksd",
+            technologies: "React.js, Firebase, bootstrap",
+            projectLink: "https://github.com/betulerkoc/diet-manager",
+            sourceCode: "https://dietmanager-431962.netlify.app/",
+        },
+        {
+            projectName: "Charging Stations",
+            source: ChargingStations,
+            description: "lkdflksd",
+            technologies: "Solidity, web3.js, React.js, Mapbox, Firebase, Bootstrap",
+            projectLink: "https://find-station-787f1c.netlify.app/",
+            sourceCode: "https://github.com/betulerkoc/station-frontend",
+        },
+    ]
 
     const classes = useStyles();
 
@@ -60,33 +110,30 @@ export default function Projects() {
         variants={pageVariants}
         transition={pageTransition}
       >
+        {projects.map(m => (
+                    <Card className={classes.root}>
+                    <CardActionArea>
+                        <CardMedia
+                        className={classes.media}
+                        image={m.source}
+                        />
+                        <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            {m.projectName}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                           
+                        </Typography>
+                        <div className={classes.row}>
+                            <a href={m.sourceCode} target="_black"><FontAwesomeIcon icon={faGithub} /></a>
+                            <a href={m.projectLink} target="_black"><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                        </div>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
+        ) )}
       
-        <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                className={classes.media}
-                image="/static/images/cards/contemplative-reptile.jpg"
-                title="Contemplative Reptile"
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    Lizard
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                <Button size="small" color="primary">
-                Share
-                </Button>
-                <Button size="small" color="primary">
-                Learn More
-                </Button>
-            </CardActions>
-        </Card>
+
       </motion.div>
     );
   }
