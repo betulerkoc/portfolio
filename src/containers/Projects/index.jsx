@@ -7,6 +7,7 @@ import Movie from '../../../public/movie.png';
 import DietManager from '../../../public/diet.png';
 import Wolt from '../../../public/wolt.png';
 import ChargingStations from '../../../public/charging.png';
+import Portfolio from '../../../public/portfolio.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { faGithub} from '@fortawesome/free-brands-svg-icons'
@@ -68,6 +69,14 @@ export default function Projects() {
             projectLink: "https://find-station-787f1c.netlify.app/",
             sourceCode: "https://github.com/betulerkoc/station-frontend",
         },
+        {
+            projectName: "Porfolio",
+            source: Portfolio,
+            description: "lkdflksd",
+            technologies: "React.js, material-ui",
+            projectLink: "https://youthful-snyder-2c9375.netlify.app/",
+            sourceCode: "https://github.com/betulerkoc/portfolio",
+        }
     ]
 
     const classes = useStyles();

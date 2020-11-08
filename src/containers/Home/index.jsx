@@ -73,7 +73,7 @@ export default function Home() {
               I am a former chemist and a junior software engineer. Years ago  I was doing a master's in chemistry. Since my main interest was computational chemistry, <br/>
               I thought it would be useful to learn some programming. So,  I enrolled in the evening programming school. I loved programming and took the university exam again. <br/>
               I got a full scholarship in software engineering at Bahcesehir University, I quit the master and started a new adventure in software engineering <br/>
-              Currently, I am working as a mobile application developer at Huawei.
+              Currently, I am working as a mobile application developer at Huawei. <br/>
               </Typography>
            </CardContent>
         </Card>
