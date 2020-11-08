@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     backgroundColor: theme.palette.background.paper,
-    margin: 30,
+    margin: 40,
   },
   inline: {
     display: 'inline',
@@ -122,7 +122,7 @@ const pageVariants = {
   >
 
 <div className="container row">
-<div className="col-6">
+<div className="col-lg-6 col-sm-12">
         <h3 className={classes.title}>Education</h3>
         <List className={classes.root}>
             {education.map(m => (
