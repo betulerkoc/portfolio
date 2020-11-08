@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function Home() {
-  
-  const pageVariants = {
+export default function Resume() {
+
+const pageVariants = {
     initial: {
         opacity: 0,
         x: "-100vw",
@@ -30,17 +30,17 @@ export default function Home() {
     const pageStyle = {
     position: "absolute"
     };
-
+    
   return (
     <motion.div
-      style={pageStyle}
-      initial="initial"
-      animate="in"
-      exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
-    >
-      <h1>This is Home Page!</h1>
+        style={pageStyle}
+        initial="initial"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+        transition={pageTransition}
+  >
+      <h1>This is Resume Page!</h1>
     </motion.div>
   );
 }
