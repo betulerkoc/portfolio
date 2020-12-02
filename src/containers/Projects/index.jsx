@@ -72,8 +72,8 @@ export default function Projects() {
           source: DietManager,
           description: "",
           technologies: "React.js, Firebase, Bootstrap",
-          projectLink: "https://github.com/betulerkoc/diet-manager",
-          sourceCode: "https://dietmanager-431962.netlify.app/",
+          projectLink: "https://dietmanager-431962.netlify.app/", 
+          sourceCode: "https://github.com/betulerkoc/diet-manager",
         },
         {
           projectName: "Charging Stations",
@@ -88,7 +88,7 @@ export default function Projects() {
           source: Portfolio,
           description: "",
           technologies: "React.js, material-ui",
-          projectLink: "https://youthful-snyder-2c9375.netlify.app/",
+          projectLink: "https://betulerkoc.netlify.app/",
           sourceCode: "https://github.com/betulerkoc/portfolio",
         }
     ]
