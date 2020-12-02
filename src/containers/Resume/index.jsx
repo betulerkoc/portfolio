@@ -27,7 +27,6 @@ export default function Resume() {
 
 const classes = useStyles();
 
-
 const workExperience = [
     {
         company: "Huawei",
@@ -62,11 +61,6 @@ const education = [
         duration: "09.2018 - 07.2020",
     },
     {
-        university: "Ayvansaray University",
-        departmant: "Computer Programming",
-        duration: "09.2016 - 07.2018",
-    },
-    {
         university: "Bogazici University",
         departmant: "Chemistry Master Degree",
         duration: "09.2016 - Drop Out",
@@ -80,8 +74,7 @@ const education = [
         university: "Wroclow Technology University",
         departmant: "Bioinformatics - Erasmus",
         duration: "09.2014 - 07.2015",
-    },
-]
+    }]
 
 const pageVariants = {
     initial: {
@@ -118,62 +111,55 @@ const pageVariants = {
         animate="in"
         exit="out"
         variants={pageVariants}
-        transition={pageTransition}
-  >
-
-<div className="container row">
-<div className="col-lg-6 col-sm-12">
-        <h3 className={classes.title}>Education</h3>
-        <List className={classes.root}>
-            {education.map(m => (
-                <ListItemText
-                secondary={
-                    <React.Fragment>
-                    <Typography
-                        component="span"
-                        variant="body2"
-                        className={classes.inline}
-                        color="textPrimary"
-                    >
-                        {m.departmant}, {m.university}
-                    </Typography> <br/>
-                    {m.duration}
-                    <Divider/>
-                    </React.Fragment>
-                }
-                />
-            ))}
-        </List>
-    </div>
-    <div className="col-6">
-        <h3 className={classes.title}>Work Experience</h3>
-        <List className={classes.root}>
-        <ListItem alignItems="center">      </ListItem>
-            {workExperience.map(m => (
-                <ListItemText
-                secondary={
-                    <React.Fragment>
-                    <Typography
-                        component="span"
-                        variant="body2"
-                        className={classes.inline}
-                        color="textPrimary"
-                    >
-                        {m.position}, {m.company}, {m.duration}
-                    </Typography> <br/>
-                    {m.technologies}
-                    <Divider/>
-                    </React.Fragment>
-                }
-                />
-            ))}
-        </List>
-    </div>
-</div>
-      
-
-   
-
+        transition={pageTransition}>
+        <div className="container row">
+        <div className="col-lg-6 col-sm-12">
+                <h3 className={classes.title}>Education</h3>
+                <List className={classes.root}>
+                    {education.map(m => (
+                        <ListItemText
+                        secondary={
+                            <React.Fragment>
+                            <Typography
+                                component="span"
+                                variant="body2"
+                                className={classes.inline}
+                                color="textPrimary"
+                            >
+                                {m.departmant}, {m.university}
+                            </Typography> <br/>
+                            {m.duration}
+                            <Divider/>
+                            </React.Fragment>
+                        }
+                        />
+                    ))}
+                </List>
+            </div>
+            <div className="col-6">
+                <h3 className={classes.title}>Work Experience</h3>
+                <List className={classes.root}>
+                <ListItem alignItems="center">      </ListItem>
+                    {workExperience.map(m => (
+                        <ListItemText
+                        secondary={
+                            <React.Fragment>
+                            <Typography
+                                component="span"
+                                variant="body2"
+                                className={classes.inline}
+                                color="textPrimary"
+                            >
+                                {m.position}, {m.company}, {m.duration}
+                            </Typography> <br/>
+                            {m.technologies}
+                            <Divider/>
+                            </React.Fragment>
+                        }/>
+                    ))}
+                </List>
+            </div>
+        </div>
     </motion.div>
   );
 }
