@@ -31,8 +31,8 @@ const workExperience = [
     {
         company: "Huawei",
         position: "Mobile Application Developer",
-        duration: "(07.2020 - Current) ",
-        technologies: "React Native, Android",
+        duration: "(08.2020 - Current) ",
+        technologies: "React Native, Java",
     },
     {
         company: "Gittigidiyor",
@@ -66,9 +66,19 @@ const education = [
         duration: "09.2016 - Drop Out",
     },
     {
+        university: "Ayvansaray University",
+        departmant: "Computer Programming",
+        duration: "09.2016 - 06.2018",
+    },
+    {
         university: "Yildiz Technical University",
         departmant: "Chemistry",
         duration: "09.2011 - 07.2016",
+    },
+    {
+        university: "Chiba University",
+        departmant: "Chemistry - JASSO Program",
+        duration: "01.2016 - 03.2016",
     },
     {
         university: "Wroclow Technology University",
