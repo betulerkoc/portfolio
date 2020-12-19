@@ -71,11 +71,6 @@ const education = [
         duration: "09.2016 - 06.2018",
     },
     {
-        university: "Yildiz Technical University",
-        departmant: "Chemistry",
-        duration: "09.2011 - 07.2016",
-    },
-    {
         university: "Chiba University",
         departmant: "Chemistry - JASSO Program",
         duration: "01.2016 - 03.2016",
@@ -84,6 +79,11 @@ const education = [
         university: "Wroclow Technology University",
         departmant: "Bioinformatics - Erasmus",
         duration: "09.2014 - 07.2015",
+    },
+    {
+        university: "Yildiz Technical University",
+        departmant: "Chemistry",
+        duration: "09.2011 - 07.2016",
     }]
 
 const pageVariants = {
